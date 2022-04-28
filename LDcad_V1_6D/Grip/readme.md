@@ -1,0 +1,1 @@
+The work from [Createboi94](https://www.youtube.com/channel/UCgsZPjRjwr4KRs1A-C37EEQ)'s [Simple Strong Powerful and Economic Lego Grip](https://www.youtube.com/watch?v=F1yQkRQzKF0&t=260s) inspired me on this design. Great thanks
