@@ -1,27 +1,36 @@
 0 FILE main.ldr
 0 Name: Hand
 0 !LDCAD SCRIPT [source=paw.lua]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=0] [GID=qXiNm1nFBC] [name=Group 1] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=1] [GID=CtYotU48bdw] [name=Group 2] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=2] [GID=FPMSHWE6A7r] [name=Group 3] [center=0 0 0]
 1 4 124 -16 -68 0 0 1 -1 0 0 0 -1 0 32062.dat
 1 8 84 -1 -68 -1 0 0 0 1 0 0 0 -1 99773.dat
 1 4 44 -16 -68 0 0 1 -1 0 0 0 -1 0 32062.dat
 1 8 84 -1 -28 1 0 0 0 1 0 0 0 1 99773.dat
 1 4 124 -16 -28 0 0 1 -1 0 0 0 -1 0 32062.dat
 1 4 44 -16 -28 0 0 1 -1 0 0 0 -1 0 32062.dat
-0 STEP
+0 ROTSTEP 45 -64 -4 ABS
 1 16 84 -16 -48 1 0 0 0 1 0 0 0 1 warm_gear.ldr
 0 STEP
-1 16 84 -16 -88 1 0 0 0 1 0 0 0 1 gerar.ldr
-1 16 84.035 -16 -8.035 0.982 0 -0.191 0 1 0 0.191 0 0.982 gerar.ldr
+0 !LDCAD GROUP_NXT [ids=1] [nrs=-1]
+1 16 84 -16 -88 1 0 0 0 1 0 0 0 1 Gear_2.ldr
+0 !LDCAD GROUP_NXT [ids=2] [nrs=-1]
+1 16 84.035 -16 -8.035 0.982 0 -0.191 0 1 0 0.191 0 0.982 gear.ldr
 0 STEP
 1 8 84.348 -31 -27.998 1 0 -0.017 0 1 0 0.017 0 1 99773.dat
 1 8 84 -31 -68 -1 0 0 0 1 0 0 0 -1 99773.dat
 0 STEP
-1 10 -26.653 -46 89.549 -0.483 0 0.876 0 1 0 -0.876 0 -0.483 16616.dat
+0 !LDCAD GROUP_NXT [ids=2] [nrs=3]
 1 10 -26.653 14 89.549 -0.483 0 0.876 0 1 0 -0.876 0 -0.483 16616.dat
-1 10 -15.824 -46 -196.528 -0.571 0 0.82 0 -1 0 0.82 0 0.571 16616.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=3]
 1 10 -15.824 14 -196.528 -0.571 0 0.82 0 -1 0 0.82 0 0.571 16616.dat
+0 !LDCAD GROUP_NXT [ids=2] [nrs=2]
+1 10 -26.653 -46 89.549 -0.483 0 0.876 0 1 0 -0.876 0 -0.483 16616.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=2]
+1 10 -15.824 -46 -196.528 -0.571 0 0.82 0 -1 0 0.82 0 0.571 16616.dat
 0 STEP
-1 16 145 -16 -48 1 0 0 0 1 0 0 0 1 subModel-1.ldr
+1 16 145 -16 -48 1 0 0 0 1 0 0 0 1 Handler.ldr
 0 STEP
 0 FILE finger_1.ldr
 0 Name: finger
@@ -46,18 +55,29 @@
 1 7 61 0 0 0 1 0 0 0 1 1 0 0 33299b.dat
 1 0 11 0 0 -1 0 0 0 1 0 0 0 -1 3706.dat
 1 4 91 40 0 -1 0 0 0 0 1 0 1 0 15555.dat
-0 FILE subModel-1.ldr
+0 FILE Handler.ldr
+0 !LDCAD GROUP_DEF [topLevel=false] [LID=0] [GID=qXiNm1nFBC]
+0 !LDCAD GROUP_NXT [ids=0] [nrs=5]
 1 7 0 0 0 0 1 0 0 0 1 1 0 0 33299b.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=6]
 1 4 30 40 0 -1 0 0 0 0 1 0 1 0 15555.dat
 0 FILE warm_gear.ldr
+0 !LDCAD GROUP_DEF [topLevel=false] [LID=0] [GID=qXiNm1nFBC]
+0 !LDCAD GROUP_NXT [ids=0] [nrs=-1]
 1 7 0 0 0 0 0 1 0 1 0 -1 0 0 4716.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=4]
 1 0 11 0 0 -1 0 0 0 1 0 0 0 -1 3706.dat
 0 STEP
+0 !LDCAD GROUP_NXT [ids=0] [nrs=3]
 1 4 -25 0 0 0 0 1 -1 0 0 0 -1 0 32123a.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=2]
 1 4 25 0 0 0 0 1 -1 0 0 0 -1 0 32123a.dat
 0 STEP
 1 0 40 0 0 0 0 1 -1 0 0 0 -1 0 32184.dat
 1 0 -40 0 0 0 0 1 -1 0 0 0 -1 0 32184.dat
-0 FILE gerar.ldr
+0 FILE gear.ldr
+1 7 0 0 0 -0.035 0.999 0 0 0 -1 -0.999 -0.035 0 24505.dat
+1 0 0 0 0 0 -0.035 0.999 -1 0 0 0 -0.999 -0.035 3705.dat
+0 FILE Gear_2.ldr
 1 7 0 0 0 -0.035 0.999 0 0 0 -1 -0.999 -0.035 0 24505.dat
 1 0 0 0 0 0 -0.035 0.999 -1 0 0 0 -0.999 -0.035 3705.dat
