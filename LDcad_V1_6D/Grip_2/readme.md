@@ -1,0 +1,1 @@
+This work was inspired by [3 simple ways to build a LEGO gripper](https://www.youtube.com/watch?v=vgqzm2A4Fe0&t=162s)
