@@ -1,0 +1,1 @@
+moudle mAni is in folder ./GeneralScript. Refer to readme.md in that folder to install the file
