@@ -1,4 +1,5 @@
 local mAni = require ("mAni")
+--local test = require("Ani")
 
 function register()
     local ani = ldc.animation("AnimationTitle") 
