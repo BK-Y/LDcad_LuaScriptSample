@@ -1,0 +1,40 @@
+0 FILE main.ldr
+0 Author: keyenter
+0 !LDCAD SCRIPT [source=Worm_Gear_Transmitting.lua]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=0] [GID=96EgOX0IHr8] [name=Group 1] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=2] [GID=J7ccrv3Qphk] [name=Group 2] [center=0 0 0]
+1 23 0 -56 83 0 1 0 1 0 0 0 0 -1 43093.dat
+1 23 0 -66 63 1 0 0 0 -1 0 0 0 -1 17141.dat
+0 ROTSTEP 101 0 124 ABS
+0 !LDCAD GROUP_NXT [ids=0] [nrs=-1]
+1 6 0 -26 43 0 0 1 -1 0 0 0 -1 0 15462.dat
+0 STEP
+1 16 0 -41 63 1 0 0 0 1 0 0 0 1 axle.ldr
+1 0 0 -36 83 0 1 0 0 0 -1 -1 0 0 59443.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=2]
+1 7 0 -36 43 0 -1 0 0 0 1 -1 0 0 4716.dat
+0 STEP
+1 23 0 -16 83 0 -1 0 -1 0 0 0 0 -1 43093.dat
+0 STEP
+1 23 0 -6 23 1 0 0 0 1 0 0 0 1 16615.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=0] [nrs=3]
+1 7 0 14 43 -1 0 0 0 0 -1 0 -1 0 10928.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=2] [nrs=-1]
+1 7 0 14 23 0 0.934 -0.358 -1 0 0 0 0.358 0.934 24316.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=2] [nrs=2]
+1 7 0 14 23 -0.934 0.358 0 0 0 -1 -0.358 -0.934 0 10928.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=2] [nrs=3]
+1 0 0 34 23 0.934 0 -0.358 0 1 0 0.358 0 0.934 33299b.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=2] [nrs=4]
+1 0 -14.335 64 60.343 0 0.934 -0.358 -1 0 0 0 0.358 0.934 15555.dat
+0 //动画视角坐定Lock Animation View
+0 ROTSTEP 97 -1 113 ABS
+0 FILE axle.ldr
+0 Author: keyenter
+1 0 0 0 0 0 1 0 -1 0 0 0 0 1 3706.dat
+1 14 0 14 0 0 -1 0 0 0 1 -1 0 0 32123b.dat
