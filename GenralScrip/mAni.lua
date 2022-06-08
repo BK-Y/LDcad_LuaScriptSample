@@ -176,4 +176,13 @@ moudle.transRotateZ = function(oPos,tPos,angDif)
     return rePos
 end
 
+moudle.move = function(subfile,off_x,off_y,off_z)
+    if (off_x == nil) then off_x = 0 end
+    if (off_y == nil) then off_y = 0 end
+    if (off_z == nil) then off_z = 0 end
+    local tmpPos = subfile:getPos()
+    tmpPos:add(off_x,off_y,off_z)
+    subfile:setPos(tmpPos)
+end
+
 return moudle
