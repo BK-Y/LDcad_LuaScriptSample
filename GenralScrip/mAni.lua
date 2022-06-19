@@ -19,18 +19,19 @@ moudle.test = function()
     print("Hello, moudle.test")
 end
 
---This function is used to rotate refline in subfile around axle.
+--This function is used to rotate target refline in subfile around axle.
 --para: subfile: the file that target refline located
 --      target:  target name in string
---      from , to :
+--      from : start position of subfile
+--      to:    end position of subfile
 --      angle: 
 --      axle:
 moudle.refRotate = function(subfile,target,from, to,angle,axle)
     local ref = subfile:getRef(1)
     local mat = ref:getPosOri()
     if (ref == nil) then
-        print("Error when call function: mAni.refRotate:\n")
-        print("the subfile you provide is nil")
+        error("Error when call function: mAni.refRotate:\n")
+        error("the subfile you provide is nil")
         return nil
     end
     for i=from, to do
@@ -176,13 +177,19 @@ moudle.transRotateZ = function(oPos,tPos,angDif)
     return rePos
 end
 
-moudle.move = function(subfile,off_x,off_y,off_z)
+moudle.move = function(refLine,off_x,off_y,off_z)
     if (off_x == nil) then off_x = 0 end
     if (off_y == nil) then off_y = 0 end
     if (off_z == nil) then off_z = 0 end
-    local tmpPos = subfile:getPos()
+    local tmpPos = refLine:getPos()
     tmpPos:add(off_x,off_y,off_z)
-    subfile:setPos(tmpPos)
+    refLine:setPos(tmpPos)
+end
+moudle.rotate = function(refLine,angle,axle)
+    if(type(angle) ~= "number") then angle = 1 end
+    local tmpOri = refLine:getOri()
+    tmpOri:mulRotateBA(angle,axle)
+    refLine:setOri(tmpOri)
 end
 
 return moudle
